@@ -1,0 +1,25 @@
+{
+	"folders": [
+		{
+			"path": "../../.venv"
+		},
+		{
+			"path": "../../authentication"
+		},
+		{
+			"path": "../../djangoproject"
+		},
+		{
+			"path": ".."
+		},
+		{
+			"path": "../../Inventory"
+		},
+		{
+			"path": "../../order"
+		},
+		{
+			"path": "../../static"
+		}
+	]
+}

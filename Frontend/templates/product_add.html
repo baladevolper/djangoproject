@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% block content %}
+<H2>Product View Page</H2>
+<a href="/inventory/products/"><button>Add_product</button></a>
+<table>
+    <thead>
+        <tr>
+            <th>Product_name</th>
+            <th>Product_code</th>
+            <th>Price</th>
+            <th>Gst</th>
+            <th>Update</th>
+            <th>Delete</th>
+
+        </tr>
+    
+    </thead>
+    <tbody>
+        {% for product in all_product %}
+            <tr>
+                <td>{{product.product_name}}</td>
+                <td>{{product.product_code}}</td>
+                <td>{{product.price}}</td>
+                <td>{{product.gst}}</td>
+                <td>
+                        <a href="{% url 'updated' product.id %}">
+                            <button>Update</button>
+                        </a>
+                </td>
+                <td> 
+                    <a href="{% url 'deleted' product.id %}">
+                    <button>Delete</button>
+                    </a>
+                </td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
